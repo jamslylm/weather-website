@@ -10,6 +10,7 @@ weatherForm.addEventListener('submit', (e) => {
 
     messageOne.textContent = 'loading...'
     messageTwo.textContent = ''
+    weatherImg.setAttribute('alt', '😉')
 
     fetch('/weather?address=' + location).then((response) => {
         response.json().then((data) => {
@@ -17,8 +18,8 @@ weatherForm.addEventListener('submit', (e) => {
                 messageOne.textContent = data.error
                 weatherImg.setAttribute('alt', '😥')
             } else {
-                messageOne.textContent = data.location
-                messageTwo.textContent = data.forecast.weatherDesc + ', it\'s ' + data.forecast.temperature + ' degrees out but it\'s feels like ' + data.forecast.feelsLike + ' degrees out'
+                messageOne.textContent = data.location + ', on ' + data.forecast.localTime
+                messageTwo.textContent = data.forecast.weatherDesc + ', it\'s ' + data.forecast.temperature + ' degrees out but it\'s feels like ' + data.forecast.feelsLike + ' degrees out, himudity is set to ' + data.forecast.humidity + ' %'
                 weatherImg.setAttribute('src', data.forecast.weatherIcon[0])
             }
         })
