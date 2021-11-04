@@ -1,12 +1,14 @@
 {
-  "name": "web-server",
+  "name": "weather-app",
   "version": "1.0.0",
-  "description": "",
-  "main": "./src/app.js",
+  "description": "A weather website built with NodeJs and Express...",
+  "main": "src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/app.js"
   },
-  "keywords": [],
+  "keywords": [
+    "weather"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
