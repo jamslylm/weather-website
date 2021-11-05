@@ -4,7 +4,8 @@
   "description": "A weather website built with NodeJs and Express...",
   "main": "src/app.js",
   "scripts": {
-    "start": "node src/app.js"
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js -e js,hbs"
   },
   "keywords": [
     "weather"
@@ -15,5 +16,8 @@
     "express": "^4.16.4",
     "hbs": "^4.0.1",
     "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
   }
 }
